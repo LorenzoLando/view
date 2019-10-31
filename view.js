@@ -7,4 +7,22 @@ var app = new Vue({
     }
   });
 
-  app.href = "www.pietrosantoro.com";
+//visualizzazione condizionale in view
+
+var conditionalDisplay = new Vue({
+    
+    el: '.conditional',
+    data: {
+        seen: true
+    }
+  });
+
+//clikko sul bottone
+  document.querySelector('.toggleButton').addEventListener('click', () => {
+    //cambio l`attributo all elemento paragrafo sottostante  
+    if(conditionalDisplay.seen == true) {
+        conditionalDisplay.seen = false;
+      } else {
+        conditionalDisplay.seen = true;
+      }
+  }) 
