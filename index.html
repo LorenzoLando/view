@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+        <title>View first experiment</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
 <body>
+<h1>My first view experiment</h1>
+    <!--il link cambia dinamicamente l href basato sui dati passatti all`elemento da view js -->
+   <h3>This is an experimental href changing link</h3>
+    <a id="link" v-bind:href="href">
+        This is the google view link
+    </a>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+<!-- esperimento display condizionale con view -->
+<h3>Click here to toggle the element</h3>
+<p>Now you can see me!</p>
 </body>
+<script src="view.js"></script>
 </html>
