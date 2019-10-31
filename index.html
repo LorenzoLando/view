@@ -13,28 +13,34 @@
     </a>
 
 <!-- esperimento display condizionale con view -->
+<!-- 2  elemento condizionato dal click-->
+<!-- 3 elemento che appare e scompare  -->
 <h3>Element toggling experiment</h3>
-<button class="toggleButton">Click me to toggle the element</button>
-<p class="conditional" v-if="seen">Now you can see me!</p>
+<button class="toggleButton">Click me to toggle the element</button> <!-- 2 -->
+<p class="conditional" v-if="seen">Now you can see me!</p> <!-- 3 -->
+
+
+
+
+
+<!-- esperimento loop con view -->
+<h3>Primo esperimento looping with view</h3>
+<form>
+    <input type="text">
+    <p id="submitButton">Aggiungi alla lista</p>
+</form>
+<div id="appLoop">
+    <ol>
+        <li v-for="todo in todos">
+            {{todo.text}}
+        </li>
+    </ol>
+</div>
+
+
+
+
+
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="view.js"></script>
 </html>

@@ -7,6 +7,9 @@ var app = new Vue({
     }
   });
 
+
+
+
 //visualizzazione condizionale in view
 
 var conditionalDisplay = new Vue({
@@ -26,3 +29,31 @@ var conditionalDisplay = new Vue({
         conditionalDisplay.seen = true;
       }
   }) 
+
+
+
+
+  //looping element vith view
+
+
+
+  var loopingElements = new Vue({
+    el: '#appLoop',
+    data: {
+      todos: [
+        { text: 'Learn JavaScript' },
+        { text: 'Learn Vue' },
+        { text: 'Build something awesome' }
+      ]
+    }
+  })
+
+
+  document.querySelector('#submitButton').addEventListener('click', () => {
+     var myText = document.querySelector('input[type="text"]').value; 
+     loopingElements.todos.push({text: myText});
+  }) 
+
+
+
+
