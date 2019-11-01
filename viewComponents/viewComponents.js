@@ -1,3 +1,6 @@
+import {componentTest} from 'components/support-item/support.js'
+
+Vue.component(componentTest)
 //declaring main navbar component
 //where to nest all other components
 Vue.component('main-nav', { //1
@@ -27,7 +30,7 @@ Vue.component('ghosting-item', {
    
 //declaring template -mail   component
 Vue.component('template-item', { 
-    template: '<li></li>'
+    template: '<li>mails</li>'
    })
    
 
@@ -41,8 +44,20 @@ Vue.component('knowledge-item', {
 
 //declaring support component
 Vue.component('support-item', { //1
-    
-    template: '<li id="sme">This where jt sme</li>'
+
+
+    data: function () {
+        return {
+            support: [
+                {name: 'Pietro', surname: 'Santoro', aviabletime:'10:00'},
+                {name: 'jrsme', surname: 'jrsme', aviabletime:'11:00'},
+                {name: 'jrsme', surname: 'jrsme', aviabletime:'12:00'},
+                {name: 'jrsme', surname: 'jrsme', aviabletime:'13:00'},
+                {name: 'jrsme', surname: 'jrsme', aviabletime:'14:00'},
+            ]
+        }
+      },
+    template: '<li>{{support[0].name}}</li>'
   })
 
 
@@ -55,14 +70,8 @@ Vue.component('support-item', { //1
       mailinda: 'mailinda',
       ghostingdata: 'someMoredata',
       templateMail: 'templateMaildata',
-      knowledge: 'knowledgebasedata',  
-      support: [
-          {name: 'Pietro', surname: 'Santoro', aviabletime:'10:00'},
-          {name: 'jrsme', surname: 'jrsme', aviabletime:'11:00'},
-          {name: 'jrsme', surname: 'jrsme', aviabletime:'12:00'},
-          {name: 'jrsme', surname: 'jrsme', aviabletime:'13:00'},
-          {name: 'jrsme', surname: 'jrsme', aviabletime:'14:00'},
-      ]
+      knowledge: 'knowledgebasedata'  
+    
     },
 
     methods: {
