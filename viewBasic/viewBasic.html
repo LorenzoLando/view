@@ -14,7 +14,7 @@
 
 <!-- esperimento display condizionale con view -->
 <!-- 2  elemento condizionato dal click-->
-<!-- 3 elemento che appare e scompare  -->
+<!-- 3 elemento che appare e scompare grazie a v-if -->
 <h3>Element toggling experiment</h3>
 <button class="toggleButton">Click me to toggle the element</button> <!-- 2 -->
 <p class="conditional" v-if="seen">Now you can see me!</p> <!-- 3 -->
@@ -36,9 +36,30 @@
         </li>
     </ol>
 </div>
+<!-- /esperimento loop con view -->
 
 
 
+
+<!-- esperimento per gestire i click degli user via view -->
+<div id="userInput">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+        <button v-on:click="hideMessage">Hide Message</button>
+</div>
+
+<!-- /esperimento handling user input -->
+
+
+
+
+<!-- esperimento v-model -->
+<div id="textInput">
+        <p>{{ message }}</p>
+        <!-- <input v-model="message"> -->
+        <input v-model="message" type="text" name="lname">
+</div>
+<!-- /esperiment v-model -->
 
 
 </body>
